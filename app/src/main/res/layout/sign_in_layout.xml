@@ -8,8 +8,8 @@
     tools:context=".StartActivity">
 
     <RelativeLayout
-        android:layout_width="405dp"
-        android:layout_height="721dp"
+        android:layout_width="410dp"
+        android:layout_height="730dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -18,18 +18,20 @@
 
         <TextView
             android:id="@+id/logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/sign_up"
+            android:layout_width="196dp"
+            android:layout_height="48dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginStart="102dp"
             android:layout_marginLeft="102dp"
-            android:layout_marginEnd="102dp"
-            android:layout_marginRight="102dp"
-            android:layout_marginBottom="183dp"
+            android:layout_marginTop="231dp"
+            android:layout_marginEnd="112dp"
+            android:layout_marginRight="112dp"
+            android:layout_marginBottom="451dp"
             android:lineSpacingExtra="8sp"
             android:text="@string/app_name"
             android:textAllCaps="true"
@@ -39,39 +41,42 @@
             android:typeface="normal"
             app:fontFamily="monospace" />
 
-        <Button
-            android:id="@+id/sign_up"
-            android:layout_width="245dp"
-            android:layout_height="55dp"
-            android:layout_above="@+id/sign_in"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="83dp"
-            android:layout_marginLeft="83dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="77dp"
-            android:layout_marginRight="77dp"
-            android:layout_marginBottom="56dp"
-            android:text="@string/sign_up" />
-
-        <Button
-            android:id="@+id/sign_in"
-            android:layout_width="245dp"
-            android:layout_height="55dp"
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="198dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="84dp"
-            android:layout_marginLeft="84dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="76dp"
-            android:layout_marginRight="76dp"
-            android:layout_marginBottom="33dp"
-            android:text="@string/sign_in" />
+            android:layout_marginStart="101dp"
+            android:layout_marginLeft="101dp"
+            android:layout_marginEnd="111dp"
+            android:layout_marginRight="111dp"
+            android:layout_marginBottom="339dp"
+            android:ems="10"
+            android:hint="@string/enter_login"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="98dp"
+            android:layout_marginLeft="98dp"
+            android:layout_marginEnd="108dp"
+            android:layout_marginRight="108dp"
+            android:layout_marginBottom="250dp"
+            android:ems="10"
+            android:hint="@string/enter_pass"
+            android:inputType="textPassword" />
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

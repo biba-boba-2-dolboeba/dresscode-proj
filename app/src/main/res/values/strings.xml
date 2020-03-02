@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">dresscode</string>
-    <string name="sign_in">sign in</string>
-    <string name="sign_up">sign up</string>
+    <string name="enter_login">e-mail</string>
+    <string name="enter_pass">password</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
