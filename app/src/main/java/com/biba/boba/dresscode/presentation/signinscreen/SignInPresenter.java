@@ -10,12 +10,23 @@ public class SignInPresenter implements View.OnClickListener
     private final SignInView signInView;
 
 
-    public SignInPresenter(SignInView signInView)
+    SignInPresenter(SignInView signInView)
     {
         this.signInView = signInView;
     }
 
-
+    boolean checkValidData(String login, String pass)
+    {
+        if (login.equals("") || pass.equals(""))
+        {
+            signInView.showMessage("invalid data");
+            return false;
+        }
+        else {
+            signInView.showMessage("");
+            return true;
+        }
+    }
 
 
     @Override
@@ -25,14 +36,16 @@ public class SignInPresenter implements View.OnClickListener
         {
             case R.id.sign_in_button :
                 Log.d("dressLog", "triggered sign_in");
+                signInView.loadMainActivity();
                 break;
 
             case R.id.forgot_account:
                 Log.d("dressLog", "triggered forgot_account");
+                signInView.loadMainActivity();
                 break;
 
         }
 
-
     }
+
 }

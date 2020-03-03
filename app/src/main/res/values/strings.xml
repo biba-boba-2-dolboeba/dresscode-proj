@@ -5,4 +5,5 @@
     <string name="enter_pass">password</string>
     <string name="forgot_account">Forgot account?</string>
 
+    <string name="error_message">you enter invalid data</string>
 </resources>

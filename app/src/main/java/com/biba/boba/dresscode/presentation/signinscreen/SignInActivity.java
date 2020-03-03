@@ -3,6 +3,7 @@ package com.biba.boba.dresscode.presentation.signinscreen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -12,10 +13,9 @@ public class SignInActivity extends AppCompatActivity implements SignInView
 {
     private SignInPresenter presenter;
 
-    Button signInButton;
-    TextView forgotAccTextView;
-    TextView passwordTextView;
-    TextView loginTextView;
+    private TextView passwordTextView;
+    private TextView loginTextView;
+    private TextView errorMessageTextView;
 
 
     @Override
@@ -30,10 +30,12 @@ public class SignInActivity extends AppCompatActivity implements SignInView
 
     private void initAllView()
     {
-        signInButton = findViewById(R.id.sign_in_button);
-        forgotAccTextView = findViewById(R.id.forgot_account);
+        Button signInButton = findViewById(R.id.sign_in_button);
+        TextView forgotAccTextView = findViewById(R.id.forgot_account);
         passwordTextView = findViewById(R.id.password_field);
         loginTextView = findViewById(R.id.login_field);
+        errorMessageTextView = findViewById(R.id.error_message);
+
 
         signInButton.setOnClickListener(presenter);
         forgotAccTextView.setOnClickListener(presenter);
@@ -41,14 +43,30 @@ public class SignInActivity extends AppCompatActivity implements SignInView
 
 
     @Override
-    public void loadActivity()
+    public void loadMainActivity()
     {
+        String pass = passwordTextView.getText().toString();
+        String login = loginTextView.getText().toString();
 
+        boolean validData = presenter.checkValidData(login, pass);
+
+        if (validData)
+            Log.i("dressLog", "переходим на галвную страницу");
+        else
+            Log.i("dressLog", "остаемся на этой странице");
     }
 
     @Override
-    public void showError()
+    public void loadForgotAccountActivity()
     {
-
+        Log.i("dressLog", "activate method loadForgotAccountActivity");
     }
+
+    @Override
+    public void showMessage(String message)
+    {
+        errorMessageTextView.setText(message);
+    }
+
+
 }
