@@ -6,4 +6,5 @@
     <string name="forgot_account">Forgot account?</string>
 
     <string name="error_message">you enter invalid data</string>
+    <string name="sign_out">create account</string>
 </resources>
