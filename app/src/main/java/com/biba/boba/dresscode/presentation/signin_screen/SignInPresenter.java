@@ -1,4 +1,4 @@
-package com.biba.boba.dresscode.presentation.signinscreen;
+package com.biba.boba.dresscode.presentation.signin_screen;
 
 import android.util.Log;
 import android.view.View;
@@ -41,7 +41,7 @@ public class SignInPresenter implements View.OnClickListener
 
             case R.id.forgot_account:
                 Log.d("dressLog", "triggered forgot_account");
-                signInView.loadMainActivity();
+                signInView.loadForgotAccountActivity();
                 break;
 
         }

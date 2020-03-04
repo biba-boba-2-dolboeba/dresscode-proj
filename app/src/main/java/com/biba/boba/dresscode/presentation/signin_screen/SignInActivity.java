@@ -1,13 +1,18 @@
-package com.biba.boba.dresscode.presentation.signinscreen;
+package com.biba.boba.dresscode.presentation.signin_screen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MotionEventCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.biba.boba.dresscode.R;
+import com.biba.boba.dresscode.presentation.forgot_account_screen.ForgotAccountActivity;
 
 public class SignInActivity extends AppCompatActivity implements SignInView
 {
@@ -42,6 +47,7 @@ public class SignInActivity extends AppCompatActivity implements SignInView
     }
 
 
+
     @Override
     public void loadMainActivity()
     {
@@ -60,6 +66,10 @@ public class SignInActivity extends AppCompatActivity implements SignInView
     public void loadForgotAccountActivity()
     {
         Log.i("dressLog", "activate method loadForgotAccountActivity");
+
+        Intent forgotAccountIntent = new Intent(this, ForgotAccountActivity.class);
+        startActivity(forgotAccountIntent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     @Override
