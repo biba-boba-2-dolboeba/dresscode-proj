@@ -41,7 +41,8 @@ public class SignInPresenter implements View.OnClickListener
 
             case R.id.sign_out:
                 Log.d("dressLog", "triggered sign_out");
-
+                signInView.loadCreateAccActivity();
+                break;
 
             case R.id.forgot_account:
                 Log.d("dressLog", "triggered forgot_account");
