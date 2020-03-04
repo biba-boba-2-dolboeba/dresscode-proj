@@ -34,10 +34,14 @@ public class SignInPresenter implements View.OnClickListener
     {
         switch (v.getId())
         {
-            case R.id.sign_in_button :
+            case R.id.sign_in:
                 Log.d("dressLog", "triggered sign_in");
                 signInView.loadMainActivity();
                 break;
+
+            case R.id.sign_out:
+                Log.d("dressLog", "triggered sign_out");
+
 
             case R.id.forgot_account:
                 Log.d("dressLog", "triggered forgot_account");
