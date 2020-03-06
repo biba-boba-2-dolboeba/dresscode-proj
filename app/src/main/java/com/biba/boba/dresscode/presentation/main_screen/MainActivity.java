@@ -3,6 +3,7 @@ package com.biba.boba.dresscode.presentation.main_screen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.biba.boba.dresscode.R;
 
@@ -12,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity_layout);
+
+        Log.i("dressLog","constructor MainActivity");
     }
 
     @Override

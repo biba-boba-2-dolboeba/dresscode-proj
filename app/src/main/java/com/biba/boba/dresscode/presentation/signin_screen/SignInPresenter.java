@@ -32,20 +32,21 @@ public class SignInPresenter implements View.OnClickListener
     @Override
     public void onClick(View v)
     {
-        switch (v.getId())
+        Log.i("dressLog", "on click");
+       switch (v.getId())
         {
             case R.id.sign_in:
-                Log.d("dressLog", "triggered sign_in");
+                Log.i("dressLog", "on sign in");
                 signInView.loadMainActivity();
                 break;
 
             case R.id.sign_out:
-                Log.d("dressLog", "triggered sign_out");
+                Log.i("dressLog", "on sign out");
                 signInView.loadCreateAccActivity();
                 break;
 
             case R.id.forgot_account:
-                Log.d("dressLog", "triggered forgot_account");
+                Log.i("dressLog", "on forgot");
                 signInView.loadForgotAccountActivity();
                 break;
 

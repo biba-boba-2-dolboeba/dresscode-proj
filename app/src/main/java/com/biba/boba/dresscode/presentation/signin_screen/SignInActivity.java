@@ -35,13 +35,12 @@ public class SignInActivity extends AppCompatActivity implements SignInView
     private void initAllView()
     {
         Button signInButton = findViewById(R.id.sign_in);
-        TextView forgotAccButton = findViewById(R.id.forgot_account);
         TextView signOutButton = findViewById(R.id.sign_out);
+        TextView forgotAccButton = findViewById(R.id.forgot_account);
 
         passwordTextView = findViewById(R.id.password_field);
         loginTextView = findViewById(R.id.login_field);
         errorMessageTextView = findViewById(R.id.error_message);
-
 
         signInButton.setOnClickListener(presenter);
         signOutButton.setOnClickListener(presenter);
@@ -60,19 +59,14 @@ public class SignInActivity extends AppCompatActivity implements SignInView
 
         if (validData)
         {
-            Log.i("dressLog", "переходим на галвную страницу");
             loadActivity(MainActivity.class);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
-        else
-            Log.i("dressLog", "остаемся на этой странице");
     }
 
     @Override
     public void loadForgotAccountActivity()
     {
-        Log.i("dressLog", "activate method loadForgotAccountActivity");
-
         loadActivity(ForgotAccountActivity.class);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
@@ -80,10 +74,14 @@ public class SignInActivity extends AppCompatActivity implements SignInView
     @Override
     public void loadCreateAccActivity()
     {
-        Log.i("dressLog", "activate method loadCreateAccActivity");
-
         loadActivity(SignOutActivity.class);
         overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_down);
+    }
+
+    private void loadActivity(Class loadActivity)
+    {
+        Intent intent = new Intent(this, loadActivity);
+        startActivity(intent);
     }
 
     @Override
@@ -92,10 +90,6 @@ public class SignInActivity extends AppCompatActivity implements SignInView
         errorMessageTextView.setText(message);
     }
 
-    private void loadActivity(Class loadActivity)
-    {
-        Intent forgotAccountIntent = new Intent(this, loadActivity);
-        startActivity(forgotAccountIntent);
-    }
+
 
 }
