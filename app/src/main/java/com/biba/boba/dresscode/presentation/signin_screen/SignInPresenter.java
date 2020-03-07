@@ -7,7 +7,7 @@ import com.biba.boba.dresscode.R;
 
 public class SignInPresenter implements View.OnClickListener
 {
-    private final SignInView signInView;
+    private SignInView signInView;
 
 
     SignInPresenter(SignInView signInView)
@@ -15,17 +15,16 @@ public class SignInPresenter implements View.OnClickListener
         this.signInView = signInView;
     }
 
-    boolean checkValidData(String login, String pass)
+    boolean isValidData(String login, String pass)
     {
         if (login.equals("") || pass.equals(""))
         {
-            signInView.showMessage("invalid data");
+            signInView.showErrorMessage("invalid data");
             return false;
         }
-        else {
-            signInView.showMessage("");
-            return true;
-        }
+
+        signInView.showErrorMessage("");
+        return true;
     }
 
 
@@ -49,9 +48,11 @@ public class SignInPresenter implements View.OnClickListener
                 Log.i("dressLog", "on forgot");
                 signInView.loadForgotAccountActivity();
                 break;
-
         }
-
     }
 
+    void onDetachView()
+    {
+        signInView = null;
+    }
 }

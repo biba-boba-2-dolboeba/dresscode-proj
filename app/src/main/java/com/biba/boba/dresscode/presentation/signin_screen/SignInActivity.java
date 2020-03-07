@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -47,20 +46,18 @@ public class SignInActivity extends AppCompatActivity implements SignInView
         forgotAccButton.setOnClickListener(presenter);
     }
 
-
-
     @Override
     public void loadMainActivity()
     {
         String pass = passwordTextView.getText().toString();
         String login = loginTextView.getText().toString();
 
-        boolean validData = presenter.checkValidData(login, pass);
+        boolean validData = presenter.isValidData(login, pass);
 
         if (validData)
         {
             loadActivity(MainActivity.class);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_down);
         }
     }
 
@@ -68,7 +65,7 @@ public class SignInActivity extends AppCompatActivity implements SignInView
     public void loadForgotAccountActivity()
     {
         loadActivity(ForgotAccountActivity.class);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_down);
     }
 
     @Override
@@ -85,7 +82,13 @@ public class SignInActivity extends AppCompatActivity implements SignInView
     }
 
     @Override
-    public void showMessage(String message)
+    protected void onDestroy() {
+        super.onDestroy();
+        presenter.onDetachView();
+    }
+
+    @Override
+    public void showErrorMessage(String message)
     {
         errorMessageTextView.setText(message);
     }

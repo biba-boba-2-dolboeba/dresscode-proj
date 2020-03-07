@@ -1,4 +1,7 @@
 package com.biba.boba.dresscode.presentation.signout_screen;
 
-interface SignOutView {
+interface SignOutView
+{
+    void loadMainActivity();
+    void showErrorMessage(String message);
 }
