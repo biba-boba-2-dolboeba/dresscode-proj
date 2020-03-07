@@ -65,7 +65,7 @@ public class SignInActivity extends AppCompatActivity implements SignInView
     public void loadForgotAccountActivity()
     {
         loadActivity(ForgotAccountActivity.class);
-        overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_down);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     @Override
