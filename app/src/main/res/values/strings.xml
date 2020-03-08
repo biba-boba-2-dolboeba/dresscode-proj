@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">dresscode</string>
     <string name="registration">registration</string>
-
+    <string name="sign_in_button">sign in</string>
     <string name="enter_login">login</string>
     <string name="name_field">name</string>
     <string name="Email_field">e-mail</string>

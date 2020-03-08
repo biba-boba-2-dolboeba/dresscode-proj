@@ -33,9 +33,9 @@ public class SignInActivity extends AppCompatActivity implements SignInView
 
     private void initAllView()
     {
-        Button signInButton = findViewById(R.id.sign_in);
-        TextView signOutButton = findViewById(R.id.sign_out);
-        TextView forgotAccButton = findViewById(R.id.forgot_account);
+        Button signInButton = findViewById(R.id.sign_in_button);
+        TextView signOutButton = findViewById(R.id.sign_out_button);
+        TextView forgotAccButton = findViewById(R.id.forgot_account_button);
 
         passwordTextView = findViewById(R.id.password_field);
         loginTextView = findViewById(R.id.login_field);
