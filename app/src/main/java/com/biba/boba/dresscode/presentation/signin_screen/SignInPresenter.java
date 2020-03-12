@@ -4,26 +4,20 @@ import android.util.Log;
 import android.view.View;
 
 import com.biba.boba.dresscode.R;
+import com.biba.boba.dresscode.dataСhecking.RegistrationDataChecking;
 
 public class SignInPresenter implements View.OnClickListener
 {
-    private SignInView signInView;
+    private SignInView view;
 
-
-    SignInPresenter(SignInView signInView)
+    SignInPresenter(SignInView view)
     {
-        this.signInView = signInView;
+        this.view = view;
     }
 
-    boolean isValidData(String login, String pass)
+    boolean isValidData(String name, String pass)
     {
-        if (login.equals("") || pass.equals(""))
-        {
-            signInView.showErrorMessage("invalid data");
-            return false;
-        }
-
-        signInView.showErrorMessage("");
+        view.showErrorMessage("");
         return true;
     }
 
@@ -36,23 +30,23 @@ public class SignInPresenter implements View.OnClickListener
         {
             case R.id.sign_in_button:
                 Log.i("dressLog", "on sign in");
-                signInView.loadMainActivity();
+                view.loadMainActivity();
                 break;
 
             case R.id.sign_out_button:
                 Log.i("dressLog", "on sign out");
-                signInView.loadCreateAccActivity();
+                view.loadCreateAccActivity();
                 break;
 
             case R.id.forgot_account_button:
                 Log.i("dressLog", "on forgot");
-                signInView.loadForgotAccountActivity();
+                view.loadForgotAccountActivity();
                 break;
         }
     }
 
     void onDetachView()
     {
-        signInView = null;
+        view = null;
     }
 }

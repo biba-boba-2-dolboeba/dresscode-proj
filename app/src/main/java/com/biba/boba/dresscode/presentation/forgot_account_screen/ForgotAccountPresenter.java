@@ -7,6 +7,7 @@ import com.biba.boba.dresscode.R;
 public class ForgotAccountPresenter implements View.OnClickListener
 {
     private final ForgotAccountView view;
+    private
 
     ForgotAccountPresenter(ForgotAccountView view)
     {
