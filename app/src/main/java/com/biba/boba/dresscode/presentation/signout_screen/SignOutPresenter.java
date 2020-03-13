@@ -3,40 +3,40 @@ package com.biba.boba.dresscode.presentation.signout_screen;
 import android.view.View;
 
 import com.biba.boba.dresscode.R;
-import com.biba.boba.dresscode.dataСhecking.RegistrationDataChecking;
+import com.biba.boba.dresscode.dataСhecking.DataChecking;
 
 public class SignOutPresenter implements View.OnClickListener {
 
     private SignOutView signOutView;
-    private RegistrationDataChecking registrationDataChecking;
+    private DataChecking dataChecking;
 
     SignOutPresenter(SignOutView signOutView)
     {
         this.signOutView = signOutView;
-        registrationDataChecking = new RegistrationDataChecking();
+        dataChecking = new DataChecking();
     }
 
     boolean isValidDates(String name, String email, String pass, String repeat_pass)
     {
-        if(!registrationDataChecking.checkName(name))
+        if(dataChecking.checkName(name))
         {
             signOutView.showErrorMessage("incorrect name");
             return false;
         }
 
-        if(!registrationDataChecking.checkEmail(email))
+        if(!dataChecking.checkEmail(email))
         {
             signOutView.showErrorMessage("incorrect e-mail");
             return false;
         }
 
-        if (!registrationDataChecking.checkPassword(pass))
+        if (dataChecking.checkPassword(pass))
         {
             signOutView.showErrorMessage("incorrect password");
             return false;
         }
 
-        if (!registrationDataChecking.checkMatchPassword(pass, repeat_pass))
+        if (!dataChecking.checkMatchPassword(pass, repeat_pass))
         {
             signOutView.showErrorMessage("passwords don 't match");
             return false;

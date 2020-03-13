@@ -4,29 +4,28 @@ import android.util.Log;
 import android.view.View;
 
 import com.biba.boba.dresscode.R;
-import com.biba.boba.dresscode.dataСhecking.LoginDataChecking;
-import com.biba.boba.dresscode.dataСhecking.RegistrationDataChecking;
+import com.biba.boba.dresscode.dataСhecking.DataChecking;
 
 public class SignInPresenter implements View.OnClickListener
 {
     private SignInView view;
-    private LoginDataChecking loginDataChecking;
+    private DataChecking dataChecking;
 
     SignInPresenter(SignInView view)
     {
         this.view = view;
-        loginDataChecking = new LoginDataChecking();
+        dataChecking = new DataChecking();
     }
 
     boolean isValidData(String name, String pass)
     {
-        if (!loginDataChecking.checkName(name))
+        if (dataChecking.checkName(name))
         {
             view.showErrorMessage("incorrect name");
             return false;
         }
 
-        if (!loginDataChecking.checkPassword(pass))
+        if (dataChecking.checkPassword(pass))
         {
             view.showErrorMessage("incorrect password");
             return false;
