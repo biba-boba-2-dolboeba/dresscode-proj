@@ -43,7 +43,7 @@ public class SignInPresenter implements View.OnClickListener
        switch (v.getId())
         {
             case R.id.sign_in_button:
-                Log.i("dressLog", "on sign in");
+                Log.i("dressLog", "main");
                 view.loadMainActivity();
                 break;
 

@@ -9,22 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-
         <activity android:name=".presentation.forgot_account_screen.ForgotAccountActivity" />
-
-        <activity android:name=".presentation.main_screen.MainActivity"/>
-
-        <activity android:name=".presentation.signout_screen.SignOutActivity"/>
-
+        <activity android:name=".presentation.main_screen.MainActivity" />
+        <activity android:name=".presentation.signout_screen.SignOutActivity" />
         <activity android:name=".presentation.signin_screen.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

@@ -6,4 +6,5 @@
     <color name="red_error">#f00</color>
     <color name="black_overlay">#66000000</color>
     <color name="blue">#34B0EE</color>
+    <color name="white">#FFFFFF</color>
 </resources>

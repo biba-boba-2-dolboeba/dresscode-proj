@@ -1,4 +1,6 @@
 package com.biba.boba.dresscode.presentation.main_screen;
 
-interface MainView {
+interface MainView
+{
+    void loadActivity();
 }
