@@ -12,8 +12,8 @@
         android:id="@+id/linearLayout"
         android:layout_width="411dp"
         android:layout_height="553dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginBottom="85dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
         android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,8 +23,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="380dp"
+            android:layout_width="match_parent"
+            android:layout_height="401dp"
             android:orientation="horizontal">
 
 
@@ -32,7 +32,7 @@
                 android:id="@+id/imageView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1."
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/test6" />
 
@@ -56,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="centerInside"
-                    app:srcCompat="@drawable/test2" />
+                    app:srcCompat="@drawable/test5" />
 
             </LinearLayout>
 
@@ -65,7 +65,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="151dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/test3" />
+                app:srcCompat="@drawable/test7" />
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/test5" />
+                app:srcCompat="@drawable/test2" />
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -90,7 +90,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/test7" />
+                app:srcCompat="@drawable/test3" />
+
 
         </LinearLayout>
 
@@ -102,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="15pt"
         android:layout_marginTop="10dp"
-        android:text="нихуя себе ты модник"
+        android:text="нихуя себе ты модни4ек"
         android:textSize="10pt"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"

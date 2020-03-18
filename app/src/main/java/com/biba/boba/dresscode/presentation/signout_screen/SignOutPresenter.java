@@ -18,7 +18,7 @@ public class SignOutPresenter implements View.OnClickListener {
 
     boolean isValidDates(String name, String email, String pass, String repeat_pass)
     {
-        if(dataChecking.checkName(name))
+        if(!dataChecking.checkName(name))
         {
             signOutView.showErrorMessage("incorrect name");
             return false;
@@ -30,7 +30,7 @@ public class SignOutPresenter implements View.OnClickListener {
             return false;
         }
 
-        if (dataChecking.checkPassword(pass))
+        if (!dataChecking.checkPassword(pass))
         {
             signOutView.showErrorMessage("incorrect password");
             return false;

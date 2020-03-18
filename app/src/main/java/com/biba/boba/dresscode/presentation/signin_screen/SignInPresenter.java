@@ -19,13 +19,13 @@ public class SignInPresenter implements View.OnClickListener
 
     boolean isValidData(String name, String pass)
     {
-        if (dataChecking.checkName(name))
+        if (!dataChecking.checkName(name))
         {
             view.showErrorMessage("incorrect name");
             return false;
         }
 
-        if (dataChecking.checkPassword(pass))
+        if (!dataChecking.checkPassword(pass))
         {
             view.showErrorMessage("incorrect password");
             return false;
