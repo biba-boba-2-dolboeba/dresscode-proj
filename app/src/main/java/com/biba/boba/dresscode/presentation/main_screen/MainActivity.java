@@ -34,4 +34,11 @@ public class MainActivity extends AppCompatActivity implements MainView
         Intent intent = new Intent(this, FavoriteActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void finish()
+    {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_down, R.anim.slide_out_up);
+    }
 }
