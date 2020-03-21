@@ -3,16 +3,17 @@ package com.biba.boba.dresscode.presentation.forgot_account_screen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.biba.boba.dresscode.R;
 
+
 public class ForgotAccountActivity extends AppCompatActivity implements ForgotAccountView
 {
     private ForgotAccountPresenter presenter;
 
+    private TextView errorTextView;
     private TextView emailTextVie;
 
     @Override
@@ -28,6 +29,7 @@ public class ForgotAccountActivity extends AppCompatActivity implements ForgotAc
     private void initAllView()
     {
         emailTextVie = findViewById(R.id.e_mail_to_restore_acc);
+        errorTextView = findViewById(R.id.forgot_account_error_message);
 
         Button nextButton = findViewById(R.id.next_button);
         nextButton.setOnClickListener(presenter);
@@ -37,13 +39,20 @@ public class ForgotAccountActivity extends AppCompatActivity implements ForgotAc
     @Override
     public void loadActivity()
     {
+        String email = emailTextVie.getText().toString();
 
+        boolean checkEmail = presenter.isValidData(email);
+
+        if (checkEmail)
+        {
+            ///загружаем сдел активити
+        }
     }
 
     @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    public void showErrorMessage(String error_message)
+    {
+         errorTextView.setText(error_message);
     }
 
 }

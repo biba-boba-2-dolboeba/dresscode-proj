@@ -39,7 +39,7 @@ public class SignInActivity extends AppCompatActivity implements SignInView
 
         passwordTextView = findViewById(R.id.password_field);
         loginTextView = findViewById(R.id.login_field);
-        errorMessageTextView = findViewById(R.id.error_message);
+        errorMessageTextView = findViewById(R.id.error_message1);
 
         signInButton.setOnClickListener(presenter);
         signOutButton.setOnClickListener(presenter);
@@ -65,7 +65,6 @@ public class SignInActivity extends AppCompatActivity implements SignInView
     public void loadForgotAccountActivity()
     {
         loadActivity(ForgotAccountActivity.class);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     @Override
