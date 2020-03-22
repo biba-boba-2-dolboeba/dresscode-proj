@@ -1,4 +1,4 @@
-package com.biba.boba.dresscode.presentation.signin_screen;
+package com.biba.boba.dresscode.screens.signin_screen;
 
 public interface SignInView {
     void loadMainActivity();

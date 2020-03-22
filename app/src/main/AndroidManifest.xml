@@ -3,16 +3,17 @@
     package="com.biba.boba.dresscode">
 
     <application
+        android:screenOrientation="portrait"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-        <activity android:name=".presentation.forgot_account_screen.ForgotAccountActivity" />
-        <activity android:name=".presentation.main_screen.MainActivity" />
-        <activity android:name=".presentation.signout_screen.SignOutActivity" />
-        <activity android:name=".presentation.signin_screen.SignInActivity">
+        <activity android:name=".screens.forgot_account_screen.ForgotAccountActivity" />
+        <activity android:name=".screens.main_screen.MainActivity" />
+        <activity android:name=".screens.signout_screen.SignOutActivity" />
+        <activity android:name=".screens.signin_screen.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

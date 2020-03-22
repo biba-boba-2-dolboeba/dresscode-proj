@@ -1,4 +1,4 @@
-package com.biba.boba.dresscode.presentation.main_screen;
+package com.biba.boba.dresscode.screens.main_screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.biba.boba.dresscode.R;
-import com.biba.boba.dresscode.presentation.favorite_screen.FavoriteActivity;
+import com.biba.boba.dresscode.screens.favorite_screen.FavoriteActivity;
 
 public class MainActivity extends AppCompatActivity implements MainView
 {

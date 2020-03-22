@@ -1,8 +1,6 @@
-package com.biba.boba.dresscode.presentation.main_screen;
+package com.biba.boba.dresscode.screens.main_screen;
 
 import android.view.View;
-
-import com.biba.boba.dresscode.R;
 
 public class MainPresenter implements View.OnClickListener
 {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.forgot_account_screen.ForgotAccountActivity">
+    tools:context=".screens.forgot_account_screen.ForgotAccountActivity">
 
     <TextView
         android:id="@+id/e_mail_to_restore_acc"

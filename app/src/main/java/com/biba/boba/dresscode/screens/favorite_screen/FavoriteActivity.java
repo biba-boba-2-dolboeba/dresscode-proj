@@ -1,4 +1,4 @@
-package com.biba.boba.dresscode.presentation.favorite_screen;
+package com.biba.boba.dresscode.screens.favorite_screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 

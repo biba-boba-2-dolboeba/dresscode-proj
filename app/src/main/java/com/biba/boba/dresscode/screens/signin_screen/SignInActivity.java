@@ -1,4 +1,4 @@
-package com.biba.boba.dresscode.presentation.signin_screen;
+package com.biba.boba.dresscode.screens.signin_screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,9 +8,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.biba.boba.dresscode.R;
-import com.biba.boba.dresscode.presentation.forgot_account_screen.ForgotAccountActivity;
-import com.biba.boba.dresscode.presentation.main_screen.MainActivity;
-import com.biba.boba.dresscode.presentation.signout_screen.SignOutActivity;
+import com.biba.boba.dresscode.screens.forgot_account_screen.ForgotAccountActivity;
+import com.biba.boba.dresscode.screens.main_screen.MainActivity;
+import com.biba.boba.dresscode.screens.signout_screen.SignOutActivity;
 
 public class SignInActivity extends AppCompatActivity implements SignInView
 {

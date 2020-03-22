@@ -1,4 +1,4 @@
-package com.biba.boba.dresscode.presentation.forgot_account_screen;
+package com.biba.boba.dresscode.screens.forgot_account_screen;
 
 interface ForgotAccountView
 {

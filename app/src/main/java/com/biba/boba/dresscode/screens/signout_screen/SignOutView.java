@@ -1,4 +1,4 @@
-package com.biba.boba.dresscode.presentation.signout_screen;
+package com.biba.boba.dresscode.screens.signout_screen;
 
 interface SignOutView
 {
