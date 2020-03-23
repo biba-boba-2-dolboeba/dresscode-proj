@@ -1,6 +1,7 @@
 package com.biba.boba.dresscode.screens.main_screen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.loader.app.LoaderManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements MainView
     {
 
     }
-
 
     @Override
     public void loadActivity()
