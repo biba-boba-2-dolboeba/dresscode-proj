@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.forgot_account_screen.ForgotAccountActivity">
+    tools:context=".screens.forgot_account_screen.ForgotAccountActivity">
 
     <TextView
         android:id="@+id/e_mail_to_restore_acc"
@@ -40,13 +40,22 @@
         android:id="@+id/next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintEnd_toEndOf="@+id/e_mail_field"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/e_mail_field"
+        app:layout_constraintTop_toBottomOf="@+id/forgot_account_error_message"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/forgot_account_error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/e_mail_field" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
