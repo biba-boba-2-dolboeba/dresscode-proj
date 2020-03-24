@@ -11,12 +11,4 @@
         android:icon="@android:drawable/ic_dialog_dialer"
         android:title="calendar"/>
 
-    <item
-        android:id="@+id/main_page"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="main"/>
-
-
-
-
 </menu>
