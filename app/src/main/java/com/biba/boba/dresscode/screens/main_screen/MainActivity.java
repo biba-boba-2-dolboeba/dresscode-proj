@@ -1,13 +1,13 @@
 package com.biba.boba.dresscode.screens.main_screen;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.loader.app.LoaderManager;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.biba.boba.dresscode.R;
-import com.biba.boba.dresscode.screens.favorite_screen.FavoriteActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements MainView
 {
@@ -25,20 +25,17 @@ public class MainActivity extends AppCompatActivity implements MainView
 
     private void initAllViews()
     {
+        //BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigate_view);
+        //bottomNavigationView.setSelectedItemId(R.id.main_page);
 
+        //bottomNavigationView.setOnNavigationItemSelectedListener(presenter);
     }
 
     @Override
-    public void loadActivity()
+    public void loadActivity(Class loadActivity)
     {
-        Intent intent = new Intent(this, FavoriteActivity.class);
+        Intent intent = new Intent(getApplicationContext(),loadActivity);
         startActivity(intent);
-    }
-
-    @Override
-    public void finish()
-    {
-        super.finish();
-        overridePendingTransition(R.anim.slide_in_down, R.anim.slide_out_up);
+        overridePendingTransition(0,0);
     }
 }

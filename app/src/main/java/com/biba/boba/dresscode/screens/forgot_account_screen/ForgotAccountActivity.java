@@ -35,7 +35,6 @@ public class ForgotAccountActivity extends AppCompatActivity implements ForgotAc
         nextButton.setOnClickListener(presenter);
     }
 
-
     @Override
     public void loadActivity()
     {

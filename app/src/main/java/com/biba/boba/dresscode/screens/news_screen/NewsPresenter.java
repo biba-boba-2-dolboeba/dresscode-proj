@@ -1,21 +1,19 @@
-package com.biba.boba.dresscode.screens.main_screen;
+package com.biba.boba.dresscode.screens.news_screen;
 
-import android.content.Intent;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 
 import androidx.annotation.NonNull;
 
 import com.biba.boba.dresscode.R;
-import com.biba.boba.dresscode.screens.news_screen.NewsActivity;
+import com.biba.boba.dresscode.screens.main_screen.MainActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainPresenter implements OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener
+public class NewsPresenter implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener
 {
-    private MainView view;
+    private final NewsView view;
 
-    MainPresenter(MainView view)
+    public NewsPresenter(NewsView view)
     {
         this.view = view;
     }
@@ -23,6 +21,11 @@ public class MainPresenter implements OnClickListener, BottomNavigationView.OnNa
     @Override
     public void onClick(View v)
     {
+        switch (v.getId())
+        {
+
+        }
+
     }
 
     @Override
@@ -30,19 +33,13 @@ public class MainPresenter implements OnClickListener, BottomNavigationView.OnNa
     {
         switch (menuItem.getItemId())
         {
-            case R.id.news_page:
-                view.loadActivity(NewsActivity.class);
+            case R.id.main_page:
+                view.loadActivity(MainActivity.class);
                 return true;
 
-            case R.id.main_page:
+            case R.id.news_page:
                 return true;
         }
-
         return false;
-    }
-
-    void onDetachView()
-    {
-        view = null;
     }
 }
