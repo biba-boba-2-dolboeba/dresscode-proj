@@ -2,5 +2,5 @@ package com.biba.boba.dresscode.screens.main_screen;
 
 interface MainView
 {
-    void loadActivity();
+    void loadActivity(Class loadActivity);
 }

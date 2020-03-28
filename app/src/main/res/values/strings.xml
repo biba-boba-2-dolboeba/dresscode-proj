@@ -8,6 +8,7 @@
     <string name="repeat_pass">repeat password</string>
     <string name="forgot_account">Forgot account?</string>
     <string name="next">next</string>
+    <string name="default_collage_name">no name</string>
     <string name="error_message">you enter invalid data</string>
     <string name="login">login</string>
     <string name="Email_for_forgot_account">please enter your account email address</string>

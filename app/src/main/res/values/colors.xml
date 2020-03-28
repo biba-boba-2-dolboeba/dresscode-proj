@@ -2,10 +2,12 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="first_color">#403F37</color>
+    <color name="main_background_color">#191919</color>
+    <color name="main_background_color_2">#222222</color>
     <color name="red_error">#f00</color>
-    <color name="black_overlay">#FFEB3B</color>
+    <color name="yellow">#FFEB3B</color>
     <color name="total_black">#000000</color>
     <color name="blue">#34B0EE</color>
     <color name="white">#FFFFFF</color>
+    <color name="transparent">#00232222</color>
 </resources>
