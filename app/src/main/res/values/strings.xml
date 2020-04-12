@@ -14,4 +14,7 @@
     <string name="Email_for_forgot_account">please enter your account email address</string>
     <string name="create_account">create account</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

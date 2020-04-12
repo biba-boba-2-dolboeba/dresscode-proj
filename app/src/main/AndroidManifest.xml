@@ -10,17 +10,16 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-        <activity android:name=".screens.news_screen.NewsActivity"></activity>
-        <activity android:name=".screens.forgot_account_screen.ForgotAccountActivity" />
-        <activity android:name=".screens.main_screen.MainActivity" />
-        <activity android:name=".screens.signout_screen.SignOutActivity" />
-        <activity android:name=".screens.signin_screen.SignInActivity">
+        <activity android:name=".screens.forgot_account_activity.ForgotAccountActivity" />
+        <activity android:name=".screens.main_activity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".screens.signout_activity.SignOutActivity" />
+        <activity android:name=".screens.signin_activity.SignInActivity"/>
     </application>
 
 </manifest>

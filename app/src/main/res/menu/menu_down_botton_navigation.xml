@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 
     <item
         android:id="@+id/news_page"
-        android:icon="@android:drawable/ic_dialog_map"
-        android:title="news"/>
+        android:icon="@drawable/selector_news"
+        android:title="@null"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/calendar_page"
-        android:icon="@android:drawable/ic_dialog_dialer"
-        android:title="calendar"/>
+        android:icon="@drawable/selector_pin"
+        android:title="@null"
+        app:showAsAction="always"/>
 
     <item
-        android:id="@+id/main_page"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="main"/>
+        android:id="@+id/collage_construct_page"
+        android:icon="@drawable/selector_main"
+        android:title="@null"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/wardrobe_page"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="wardrobe"/>
+        android:icon="@drawable/selector_hanger"
+        android:title="@null"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/profile_page"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="profile"/>
+        android:icon="@drawable/selector_profile"
+        android:title="@null"
+        app:showAsAction="always"/>
 
 
 </menu>

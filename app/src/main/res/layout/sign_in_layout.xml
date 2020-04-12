@@ -7,7 +7,7 @@
     android:background="@color/main_background_color"
     android:layout_centerHorizontal="false"
     android:visibility="visible"
-    tools:context=".screens.signin_screen.SignInActivity">
+    tools:context=".screens.signin_activity.SignInActivity">
 
     <TextView
         android:id="@+id/dresscodeText"
@@ -22,7 +22,7 @@
         android:text="@string/app_name"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="@color/yellow"
+        android:textColor="@color/alternative"
         android:textSize="36sp"
         android:typeface="normal"
         app:fontFamily="monospace"
