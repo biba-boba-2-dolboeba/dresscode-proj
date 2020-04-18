@@ -8,28 +8,35 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.biba.boba.dresscode.R;
-import com.biba.boba.dresscode.screens.main_activity.fragments.news_fragment.post.PostFragment;
+import com.biba.boba.dresscode.screens.main_activity.fragments.news_fragment.post_fragment.PostAdapter;
+import com.biba.boba.dresscode.viewpager_vertical.VerticalViewPager;
 
 
 public class NewsFragment extends Fragment
 {
 
-    public NewsFragment()
-    {
-
+    public NewsFragment() {
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        PostAdapter postAdapter = new PostAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+
+        VerticalViewPager viewPager = view.findViewById(R.id.post_fragment_container);
+        viewPager.setAdapter(postAdapter);
+    }
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        if(savedInstanceState == null)
-        {
-            getChildFragmentManager().beginTransaction().replace(R.id.post_fragment_container,new PostFragment()).commit();
-        }
-
         return inflater.inflate(R.layout.news_fragment,container,false);
     }
+
 }
