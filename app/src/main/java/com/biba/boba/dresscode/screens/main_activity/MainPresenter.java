@@ -1,14 +1,12 @@
 package com.biba.boba.dresscode.screens.main_activity;
 
 import android.annotation.SuppressLint;
-import android.graphics.drawable.AnimatedVectorDrawable;
-import android.graphics.drawable.Drawable;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 
 import com.biba.boba.dresscode.R;
-import com.biba.boba.dresscode.screens.main_activity.fragments.collage_construct_fragment.CollageConstructFragment;
+import com.biba.boba.dresscode.screens.main_activity.fragments.home_fragment.HomeFragment;
 import com.biba.boba.dresscode.screens.main_activity.fragments.news_fragment.NewsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -41,7 +39,7 @@ public class MainPresenter implements BottomNavigationView.OnNavigationItemSelec
                 return true;
 
             case R.id.collage_construct_page:
-                view.loadFragment(new CollageConstructFragment());
+                view.loadFragment(new HomeFragment());
                 return true;
         }
 

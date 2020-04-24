@@ -1,7 +1,7 @@
 package com.biba.boba.dresscode.model.post_model;
 
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Post
 {
@@ -10,9 +10,9 @@ public class Post
     private int likes;
     private String profileName;
     private String description;
-    private List<Integer> imageResourceId;
+    private ArrayList<Integer> imageResourceId;
 
-    Post(int profileImage, String profileName, String description, List<Integer> imageResourceId)
+    Post(int profileImage, String profileName, String description, ArrayList<Integer> imageResourceId)
     {
         this.profileImage = profileImage;
         this.profileName = profileName;
@@ -44,11 +44,11 @@ public class Post
         this.description = description;
     }
 
-    public List<Integer> getImageResourceId() {
+    public ArrayList<Integer> getImageResourceId() {
         return imageResourceId;
     }
 
-    public void setImageResourceId(List<Integer> imageResourceId) {
+    public void setImageResourceId(ArrayList<Integer> imageResourceId) {
         this.imageResourceId = imageResourceId;
     }
 }

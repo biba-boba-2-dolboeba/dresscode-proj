@@ -4,6 +4,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="main_background_color">#151515</color>
+    <color name="main_background_color_trans">#BC151515</color>
     <color name="main_background_color_2">#222222</color>
     <color name="red_error">#f00</color>
     <color name="creme">#F5DEB3</color>
@@ -12,7 +13,7 @@
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00232222</color>
     <color name="dull_grey">#A1A1A1</color>
-    <color name="transparent_dull_grey">#E6979595</color>
+    <color name="transparent_dull_grey">#95979595</color>
     <color name="alternative">#ED69A1</color>
 
 </resources>

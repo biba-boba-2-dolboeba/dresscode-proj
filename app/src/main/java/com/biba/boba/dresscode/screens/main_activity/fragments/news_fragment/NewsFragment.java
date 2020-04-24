@@ -27,7 +27,7 @@ public class NewsFragment extends Fragment
 
         PostAdapter postAdapter = new PostAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
 
-        VerticalViewPager viewPager = view.findViewById(R.id.post_fragment_container);
+        VerticalViewPager viewPager = view.findViewById(R.id.post_viewPager);
         viewPager.setAdapter(postAdapter);
     }
 

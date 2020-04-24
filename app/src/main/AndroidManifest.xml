@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/ic_profile"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".screens.forgot_account_activity.ForgotAccountActivity" />
         <activity android:name=".screens.main_activity.MainActivity" >
             <intent-filter>

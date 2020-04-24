@@ -1,6 +1,7 @@
 package com.biba.boba.dresscode.screens.main_activity.fragments.news_fragment.post_fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,9 +9,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.biba.boba.dresscode.R;
+
+import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -19,7 +23,7 @@ public class PostFragment extends Fragment
     static final String IMG_PROFILE = "image_profile";
     static final String NAME_PROFILE = "name_profile";
     static final String DESCRIPTION_POST = "description_post";
-
+    static final String IMG_LIST = "image_list";
 
     public PostFragment() {
     }
@@ -36,6 +40,7 @@ public class PostFragment extends Fragment
             int imageViewProfile = arguments.getInt(IMG_PROFILE);
             String nameProfile = arguments.getString(NAME_PROFILE);
             String descriptionPost = arguments.getString(DESCRIPTION_POST);
+            ArrayList<Integer> imageResourceId = arguments.getIntegerArrayList(IMG_LIST);
 
             displayValues(view, imageViewProfile, nameProfile, descriptionPost);
         }
@@ -46,8 +51,10 @@ public class PostFragment extends Fragment
     private void displayValues(View v, int imageViewProfile, String nameProfile, String descriptionPost)
     {
         CircleImageView postProfileCircleImage = v.findViewById(R.id.profile_image);
+
         TextView postNameProfile = v.findViewById(R.id.profile_name);
         TextView postDescription = v.findViewById(R.id.description);
+
 
         postProfileCircleImage.setImageResource(imageViewProfile);
 

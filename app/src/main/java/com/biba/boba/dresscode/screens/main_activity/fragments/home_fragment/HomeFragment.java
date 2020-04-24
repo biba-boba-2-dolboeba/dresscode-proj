@@ -1,4 +1,4 @@
-package com.biba.boba.dresscode.screens.main_activity.fragments.collage_construct_fragment;
+package com.biba.boba.dresscode.screens.main_activity.fragments.home_fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment;
 
 import com.biba.boba.dresscode.R;
 
-public class CollageConstructFragment extends Fragment
+public class HomeFragment extends Fragment
 {
-    public CollageConstructFragment()
+    public HomeFragment()
     {
 
     }
@@ -22,7 +22,7 @@ public class CollageConstructFragment extends Fragment
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        return inflater.inflate(R.layout.collage_constructor_fragment,container,false);
+        return inflater.inflate(R.layout.home_fragment,container,false);
     }
 
 }

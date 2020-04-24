@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import com.biba.boba.dresscode.model.post_model.Post;
 import com.biba.boba.dresscode.model.post_model.PostReader;
 
+import java.util.ArrayList;
 
 
 public class PostAdapter extends FragmentStatePagerAdapter
@@ -34,10 +35,12 @@ public class PostAdapter extends FragmentStatePagerAdapter
         int currentImageProfile = currentPost.getProfileImage();
         String currentNameProfile = currentPost.getProfileName();
         String currentDescription = currentPost.getDescription();
+        ArrayList<Integer> imageResourceId = currentPost.getImageResourceId();
 
         arguments.putInt(PostFragment.IMG_PROFILE, currentImageProfile);
         arguments.putString(PostFragment.NAME_PROFILE, currentNameProfile);
         arguments.putString(PostFragment.DESCRIPTION_POST, currentDescription);
+        arguments.putIntegerArrayList(PostFragment.IMG_LIST, imageResourceId);
 
         PostFragment postFragment = new PostFragment();
         postFragment.setArguments(arguments);

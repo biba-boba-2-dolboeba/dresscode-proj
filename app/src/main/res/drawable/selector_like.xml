@@ -3,10 +3,10 @@
 
     <item
         android:state_checked="true"
-        android:drawable="@drawable/ic_main_1"
+        android:drawable="@drawable/ic_serce"
         />
 
     <item
-        android:drawable="@drawable/ic_main_1"/>
+        android:drawable="@drawable/ic_serce"/>
 
 </selector>
